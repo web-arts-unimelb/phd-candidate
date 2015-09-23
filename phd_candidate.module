@@ -1,0 +1,17 @@
+<?php
+
+// Hook_init
+function phd_candidate_init() {
+	// https://api.drupal.org/api/drupal/includes!path.inc/function/current_path/7
+	$path = current_path(); // It returns something like node/1234
+	$path_alias = drupal_lookup_path('alias',$path);
+
+	if(preg_match('|^phd\-candidates?|', $path_alias, $matches)) {
+		$module_path = drupal_get_path('module', 'phd_candidate');
+		drupal_add_js($module_path . '/phd_candidate.js');
+	}
+	else {
+
+	}
+
+}

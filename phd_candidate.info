@@ -1,0 +1,3 @@
+name = PhD candidate 
+description = Module to control /phd-candidates in Arts website 
+core = 7.x
